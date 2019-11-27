@@ -1,7 +1,8 @@
 <div class="container">
     <h1>Burgers To Eat Today</h1>
-    <div class="row">
-        <div class="col">
+    <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+            <h5 class="row justify-content-md-center">Waiting to be Eaten:</h5>
             <ol>
                 {{#each burger}}
                 {{#unless this.devoured}}
@@ -10,7 +11,8 @@
                 {{/each}}
             </ol>
         </div>
-        <div class="col">
+        <div class="col-md-auto">
+            <h5 class="row justify-content-md-center">Eaten:</h5>
             <ol>
                 {{#each burger}}
                 {{#if this.devoured}}
@@ -20,13 +22,16 @@
             </ol>
         </div>
     </div>
-    <div class="row" class="textArea">
+    <div class="row justify-content-md-center" class="textArea">
         <form name="inputForm" action="/" method="POST" onsubmit="return validateForm()">
-            <div class="row">
-                <textarea name="newBurger" id="burgerArea" cols="30" rows="5"></textarea>
+            <div class="row justify-content-md-center">
+                <textarea name="newBurger" id="burgerArea" cols="55" rows="5"></textarea>
             </div>
-            <div class="row">
-                <button type="submit" value="Add Burger">Add Burger</button>
+            <div class="row justify-content-md-center">
+                <button class="addBtn" type="submit" value="Add Burger">Add Burger</button>
+            </div>
+            <div class="row justify-content-md-center">
+                <p>Enter a burger you want to eat. Click the "Submit" button.</p>
             </div>
         </form>
 

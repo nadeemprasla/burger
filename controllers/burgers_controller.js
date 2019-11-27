@@ -18,7 +18,6 @@ router.put("/api/burger/:id", (req, res) => {
         if (data.changedRows == 0) {
             return res.status(404).end();
         } else {
-            console.log("here")
             res.status(200).end();
         }
     })
@@ -35,7 +34,6 @@ router.delete("/:id?", (req, res) => {
         if (data.affectedRows == 0) {
             return res.status(404).end();
         } else {
-            console.log("here")
             res.status(200).end();
         }
     })

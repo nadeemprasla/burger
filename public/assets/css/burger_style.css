@@ -1,7 +1,27 @@
 h1 {
-    text-align:center;
-}
-.col{
     text-align: center;
+}
+
+.col {
+    /* text-align: center; */
     list-style-position: inside;
+}
+
+.devouredBtn {
+    margin: 5px 10px 5px 10px;
+}
+
+.eatenBtn {
+    margin: 5px 10px 5px 10px;
+}
+
+.addBtn {
+    margin: 10px 0px 10px 0;
+}
+
+form {
+    margin-top: 30px;
+}
+h5{
+    text-decoration: underline;
 }
