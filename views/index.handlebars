@@ -1,5 +1,35 @@
-<ol>
-    {{#each burger}}
-    <li>{{this.name}}</li>
-    {{/each}}
-</ol>
+<div class="container">
+    <h1>Burgers To Eat Today</h1>
+    <div class="row">
+        <div class="col">
+            <ol>
+                {{#each burger}}
+                {{#unless this.devoured}}
+                {{> EatOrNotToEat}}
+                {{/unless}}
+                {{/each}}
+            </ol>
+        </div>
+        <div class="col">
+            <ol>
+                {{#each burger}}
+                {{#if this.devoured}}
+                {{> eaten}}
+                {{/if}}
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+    <div class="row" class="textArea">
+        <form name="inputForm" action="/" method="POST" onsubmit="return validateForm()">
+            <div class="row">
+                <textarea name="newBurger" id="burgerArea" cols="30" rows="5"></textarea>
+            </div>
+            <div class="row">
+                <button type="submit" value="Add Burger">Add Burger</button>
+            </div>
+        </form>
+
+
+    </div>
+</div>
